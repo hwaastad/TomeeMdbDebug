@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/ApacheCxf">
+  <Realm appName="PropertiesLogin" className="org.apache.catalina.realm.JAASRealm" roleClassNames="org.apache.openejb.core.security.jaas.GroupPrincipal" userClassNames="org.apache.openejb.core.security.jaas.UserPrincipal">
+    </Realm>
+</Context>

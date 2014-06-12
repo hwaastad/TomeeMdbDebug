@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Service id="jaasfilter" class-name="org.apache.cxf.jaxrs.security.JAASAuthenticationFilter">
+        realmName=PropertiesLogin
+        contextName=PropertiesLogin
+        ignoreBasePath=true
+    </Service>
+    <Service id="jaasinterceptor" class-name="org.apache.cxf.interceptor.security.JAASLoginInterceptor">
+        contextName=PropertiesLogin
+        <!--roleClassifier=GroupPrincipal-->
+    </Service>
+    <Service id="authinterceptor" class-name="org.apache.cxf.interceptor.security.SimpleAuthorizingInterceptor">
+        globalRoles=admin
+    </Service>
+    <Service id="authFilter" class-name="org.apache.cxf.jaxrs.security.SimpleAuthorizingFilter"/>
+    <Service id="jacksonprovider" class-name="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/>
+    <Service id="jsonProvider" class-name="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" /> 
+</resources>
